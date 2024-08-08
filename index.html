@@ -19,6 +19,22 @@
             line-height: 1.5;
             padding: 0 10px;
         }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .text-content {
+            flex: 1;
+        }
+        .logo-container {
+            width: 150px; /* Adjust based on your needs */
+            margin-left: 20px;
+        }
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+        }
         h1 {
             font-size: 2em;
             margin-bottom: 0;
@@ -72,8 +88,15 @@
 </head>
 <body>
     <div id="main">
-        <h1>Introducing Spagbol.co</h1>
-        <h2>March 22, 2024</h2>
+        <div class="header-container">
+            <div class="text-content">
+                <h1>Introducing Spagbol.co</h1>
+                <h2>March 22, 2024</h2>
+            </div>
+            <div class="logo-container">
+                <img src="spagbol_low_res2.png" alt="Spagbol logo">
+            </div>
+        </div>
         
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         
@@ -105,8 +128,8 @@
                 document.getElementById('response-message').textContent = 'Thank you for joining our waitlist!';
                 document.getElementById('email-input').value = '';
             }).catch(function(error) {
-                document.getElementById('response-message').textContent = 'An error occurred. Please try again.';
                 console.error('Error:', error);
+                document.getElementById('response-message').textContent = 'An error occurred. Please try again.';
             });
         });
     </script>
