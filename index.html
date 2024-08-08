@@ -17,28 +17,35 @@
         }
         #main {
             max-width: 650px;
-            margin: 0 auto;
-            padding: 20px 10px;
+            margin: 4% auto;
+            line-height: 1.5;
+            padding: 0 10px;
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-        }
-        .content {
-            overflow-y: auto;
         }
         .header-container {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: space-between;
-            margin-bottom: 20px;
+        }
+        .text-content {
+            flex: 1;
+        }
+        .logo-container {
+            width: 150px;
+            margin-left: 20px;
+        }
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
         }
         h1 {
             font-size: 2em;
-            margin: 0;
+            margin-bottom: 0;
         }
         h2 {
-            margin: 5px 0 0;
+            margin-top: 0;
             color: #888;
             font-size: 1em;
             font-weight: 400;
@@ -82,57 +89,54 @@
             margin-top: 10px;
             font-weight: bold;
         }
-        footer {
+        .made-with-love {
             text-align: center;
-            padding: 20px 0;
+            margin-top: 20px;
         }
-        footer a {
+        .made-with-love a {
             color: #007bff;
             text-decoration: none;
         }
-        footer a:hover {
+        .made-with-love a:hover {
             text-decoration: underline;
         }
         @media (max-width: 768px) {
             body, html {
                 overflow: auto;
             }
-            #main {
-                height: auto;
-            }
         }
     </style>
 </head>
 <body>
     <div id="main">
-        <div class="content">
-            <div class="header-container">
-                <div>
-                    <h1>Introducing Spagbol</h1>
-                    <h2>August 1st, 2024</h2>
-                </div>
-                <img src="spagbol_low_res2.png" alt="Spagbol logo" style="width: 100px; height: 100px; object-fit: contain;">
+        <div class="header-container">
+            <div class="text-content">
+                <h1>Introducing Spagbol</h1>
+                <h2>August 1st, 2024</h2>
             </div>
-            
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            
-            <div id="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <div class="logo-container">
+                <img src="spagbol_low_res2.png" alt="Spagbol logo">
             </div>
-            
-            <form id="waitlist-form">
-                <input type="email" id="email-input" placeholder="Enter your email" required>
-                <button type="submit" id="submit-button">Join Waitlist</button>
-            </form>
-            <div id="response-message"></div>
         </div>
         
-        <footer>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        
+        <div id="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        
+        <form id="waitlist-form">
+            <input type="email" id="email-input" placeholder="Enter your email" required>
+            <button type="submit" id="submit-button">Join Waitlist</button>
+        </form>
+        <div id="response-message"></div>
+        
+        <div class="made-with-love">
             Made with ❤️ by 
             <a href="https://github.com/paul">Paul</a>, 
             <a href="https://github.com/andrii">Andrii</a> & 
             <a href="https://github.com/ardhi">Ardhi</a>
-        </footer>
+        </div>
     </div>
 
     <script>
